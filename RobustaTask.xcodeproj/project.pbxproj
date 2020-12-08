@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06CDE02B257FBA4E000B4D2D /* NetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE02A257FBA4E000B4D2D /* NetworkHandler.m */; };
+		06CDE02C257FBA4E000B4D2D /* NetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE02A257FBA4E000B4D2D /* NetworkHandler.m */; };
+		06CDE02E257FBBA7000B4D2D /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE02D257FBBA7000B4D2D /* TestVC.swift */; };
+		06CDE02F257FBBA7000B4D2D /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE02D257FBBA7000B4D2D /* TestVC.swift */; };
+		06CDE034257FC940000B4D2D /* UIImageView+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE033257FC940000B4D2D /* UIImageView+Network.swift */; };
+		06CDE035257FC940000B4D2D /* UIImageView+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE033257FC940000B4D2D /* UIImageView+Network.swift */; };
 		06FCA5E5257F85EF00BEAFE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA5E4257F85EF00BEAFE0 /* AppDelegate.swift */; };
 		06FCA5E7257F85EF00BEAFE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA5E6257F85EF00BEAFE0 /* SceneDelegate.swift */; };
 		06FCA5EC257F85EF00BEAFE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06FCA5EA257F85EF00BEAFE0 /* Main.storyboard */; };
@@ -79,6 +85,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06CDE025257FB974000B4D2D /* RobustaTask-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RobustaTask-Bridging-Header.h"; sourceTree = "<group>"; };
+		06CDE028257FBA4D000B4D2D /* RobustaTaskTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RobustaTaskTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		06CDE029257FBA4E000B4D2D /* NetworkHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkHandler.h; sourceTree = "<group>"; };
+		06CDE02A257FBA4E000B4D2D /* NetworkHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkHandler.m; sourceTree = "<group>"; };
+		06CDE02D257FBBA7000B4D2D /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		06CDE033257FC940000B4D2D /* UIImageView+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Network.swift"; sourceTree = "<group>"; };
 		06FCA5E1257F85EF00BEAFE0 /* RobustaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobustaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06FCA5E4257F85EF00BEAFE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06FCA5E6257F85EF00BEAFE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +163,23 @@
 				71C589788374239628C03AC4 /* Pods_RobustaTaskTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		06CDE030257FC86F000B4D2D /* Network Objective C  */ = {
+			isa = PBXGroup;
+			children = (
+				06CDE029257FBA4E000B4D2D /* NetworkHandler.h */,
+				06CDE02A257FBA4E000B4D2D /* NetworkHandler.m */,
+			);
+			path = "Network Objective C ";
+			sourceTree = "<group>";
+		};
+		06CDE036257FC94D000B4D2D /* Image - Swift */ = {
+			isa = PBXGroup;
+			children = (
+				06CDE033257FC940000B4D2D /* UIImageView+Network.swift */,
+			);
+			path = "Image - Swift";
 			sourceTree = "<group>";
 		};
 		06FCA5D8257F85EF00BEAFE0 = {
@@ -235,6 +264,7 @@
 		06FCA60D257F8C9D00BEAFE0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				06CDE02D257FBBA7000B4D2D /* TestVC.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -359,6 +389,10 @@
 		06FCA656257F919A00BEAFE0 /* NetworkData */ = {
 			isa = PBXGroup;
 			children = (
+				06CDE036257FC94D000B4D2D /* Image - Swift */,
+				06CDE030257FC86F000B4D2D /* Network Objective C  */,
+				06CDE025257FB974000B4D2D /* RobustaTask-Bridging-Header.h */,
+				06CDE028257FBA4D000B4D2D /* RobustaTaskTests-Bridging-Header.h */,
 			);
 			path = NetworkData;
 			sourceTree = "<group>";
@@ -454,9 +488,11 @@
 				TargetAttributes = {
 					06FCA5E0257F85EF00BEAFE0 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					06FCA5F9257F85F300BEAFE0 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 						TestTargetID = 06FCA5E0257F85EF00BEAFE0;
 					};
 				};
@@ -468,8 +504,6 @@
 			knownRegions = (
 				en,
 				Base,
-				ar,
-				tr,
 			);
 			mainGroup = 06FCA5D8257F85EF00BEAFE0;
 			productRefGroup = 06FCA5E2257F85EF00BEAFE0 /* Products */;
@@ -583,9 +617,12 @@
 				06FCA64C257F914A00BEAFE0 /* AppFactory.swift in Sources */,
 				06FCA63D257F913A00BEAFE0 /* NSConstraint+Multiplier.swift in Sources */,
 				06FCA649257F913A00BEAFE0 /* String+Codable.swift in Sources */,
+				06CDE02B257FBA4E000B4D2D /* NetworkHandler.m in Sources */,
 				06FCA635257F913A00BEAFE0 /* ViewShadow_Border.swift in Sources */,
 				06FCA637257F913A00BEAFE0 /* UIColor+Hex.swift in Sources */,
 				06FCA5E5257F85EF00BEAFE0 /* AppDelegate.swift in Sources */,
+				06CDE034257FC940000B4D2D /* UIImageView+Network.swift in Sources */,
+				06CDE02E257FBBA7000B4D2D /* TestVC.swift in Sources */,
 				06FCA660257F91BC00BEAFE0 /* EmptyData.swift in Sources */,
 				06FCA645257F913A00BEAFE0 /* Img+GIF.swift in Sources */,
 				06FCA63B257F913A00BEAFE0 /* UIWindow+Landescape.swift in Sources */,
@@ -611,8 +648,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				06FCA653257F919700BEAFE0 /* UserDefaultClass.swift in Sources */,
+				06CDE035257FC940000B4D2D /* UIImageView+Network.swift in Sources */,
 				06FCA642257F913A00BEAFE0 /* UIView+RippleEffect.swift in Sources */,
 				06FCA632257F913A00BEAFE0 /* String+Validation.swift in Sources */,
+				06CDE02C257FBA4E000B4D2D /* NetworkHandler.m in Sources */,
 				06FCA64A257F913A00BEAFE0 /* String+Codable.swift in Sources */,
 				06FCA661257F91BC00BEAFE0 /* EmptyData.swift in Sources */,
 				06FCA634257F913A00BEAFE0 /* UIView+CornerRadius.swift in Sources */,
@@ -625,6 +664,7 @@
 				06FCA644257F913A00BEAFE0 /* UITableView+Cell.swift in Sources */,
 				06FCA63E257F913A00BEAFE0 /* NSConstraint+Multiplier.swift in Sources */,
 				06FCA63A257F913A00BEAFE0 /* NSObject+Name.swift in Sources */,
+				06CDE02F257FBBA7000B4D2D /* TestVC.swift in Sources */,
 				06FCA63C257F913A00BEAFE0 /* UIWindow+Landescape.swift in Sources */,
 				06FCA5FF257F85F300BEAFE0 /* RobustaTaskTests.swift in Sources */,
 				06FCA630257F913A00BEAFE0 /* Date+FullForamtter.swift in Sources */,
@@ -792,6 +832,7 @@
 			baseConfigurationReference = 9A81A8B4A8885441F4B359E9 /* Pods-RobustaTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4673NFB24A;
 				INFOPLIST_FILE = RobustaTask/Application/Info.plist;
@@ -801,6 +842,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Wakeb.RobustaTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RobustaTask/Infrastructure/Repo/NetworkData/RobustaTask-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -811,6 +854,7 @@
 			baseConfigurationReference = F8A89C4C51D8CF4DAE7190BF /* Pods-RobustaTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4673NFB24A;
 				INFOPLIST_FILE = RobustaTask/Application/Info.plist;
@@ -820,6 +864,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Wakeb.RobustaTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RobustaTask/Infrastructure/Repo/NetworkData/RobustaTask-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -831,6 +876,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4673NFB24A;
 				INFOPLIST_FILE = RobustaTaskTests/Info.plist;
@@ -842,6 +888,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Wakeb.RobustaTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RobustaTask/Infrastructure/Repo/NetworkData/RobustaTaskTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RobustaTask.app/RobustaTask";
@@ -854,6 +902,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4673NFB24A;
 				INFOPLIST_FILE = RobustaTaskTests/Info.plist;
@@ -865,6 +914,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Wakeb.RobustaTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RobustaTask/Infrastructure/Repo/NetworkData/RobustaTaskTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RobustaTask.app/RobustaTask";
