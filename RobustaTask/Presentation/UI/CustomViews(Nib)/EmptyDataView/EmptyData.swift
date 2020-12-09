@@ -53,7 +53,7 @@ class EmptyData: UIView {
     }
     
     
-    func config2(img:String?,title:String?,message:String?){
+    func config2(img:String?,title:String?,message:String?) {
            self.btnRload.setTitleColor(.white, for: .normal)
            self.lblTitle.textColor = .white
            self.lblMessage.textColor = .white

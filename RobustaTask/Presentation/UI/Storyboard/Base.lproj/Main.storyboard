@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hst-f8-1wG">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -8,20 +8,101 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TestVC-->
+        <!--Repositories-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TestVC" customModule="RobustaTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListScreenVC" id="BYZ-38-t0r" customClass="ListScreenVC" customModule="RobustaTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9TG-T3-yY1" customClass="SkeletonProfileView" customModule="RobustaTask" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZi-RA-ZnV">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DJb-vi-o65">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="pTr-Hp-87h"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="hLx-sB-4Ed"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="DJb-vi-o65" secondAttribute="trailing" id="1wa-OD-OpC"/>
+                                    <constraint firstItem="DJb-vi-o65" firstAttribute="top" secondItem="JZi-RA-ZnV" secondAttribute="top" id="6Z4-Ln-I07"/>
+                                    <constraint firstAttribute="bottom" secondItem="DJb-vi-o65" secondAttribute="bottom" id="FIc-Zu-Cbz"/>
+                                    <constraint firstItem="DJb-vi-o65" firstAttribute="leading" secondItem="JZi-RA-ZnV" secondAttribute="leading" id="d3D-DO-Ucj"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sSM-NU-3xP">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9TG-T3-yY1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2xW-cA-t0i"/>
+                            <constraint firstItem="9TG-T3-yY1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A6k-tW-XY9"/>
+                            <constraint firstItem="JZi-RA-ZnV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LXA-uH-y0P"/>
+                            <constraint firstItem="9TG-T3-yY1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VF0-p0-fVy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JZi-RA-ZnV" secondAttribute="trailing" id="czj-SL-iw1"/>
+                            <constraint firstItem="JZi-RA-ZnV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eLK-jp-Kv8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JZi-RA-ZnV" secondAttribute="bottom" id="gQI-no-L5X"/>
+                            <constraint firstItem="9TG-T3-yY1" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="nLw-vO-IKD"/>
+                            <constraint firstItem="sSM-NU-3xP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nbW-kB-jta"/>
+                            <constraint firstItem="sSM-NU-3xP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wle-mw-kja"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <navigationItem key="navigationItem" title="Repositories" id="qRY-Oi-Sgw">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Path 12" id="HL4-fB-tgt">
+                            <connections>
+                                <action selector="searchClicked:" destination="BYZ-38-t0r" id="gsJ-G7-wIm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="TVRepo" destination="DJb-vi-o65" id="M0S-81-GK2"/>
+                        <outlet property="activityGetList" destination="sSM-NU-3xP" id="Wp0-ft-Yae"/>
+                        <outlet property="skeletonViw" destination="9TG-T3-yY1" id="wci-tq-qqP"/>
+                        <outlet property="vuContain" destination="JZi-RA-ZnV" id="j3o-by-t0L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="130"/>
+            <point key="canvasLocation" x="1136.25" y="129.92957746478874"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XBG-fH-Iwo">
+            <objects>
+                <navigationController storyboardIdentifier="navList" automaticallyAdjustsScrollViewInsets="NO" id="hst-f8-1wG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q7o-8B-wlp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OSU-zi-ZVa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x6w-QP-ZMK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.75" y="129.92957746478874"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Path 12" width="21" height="21"/>
+    </resources>
 </document>

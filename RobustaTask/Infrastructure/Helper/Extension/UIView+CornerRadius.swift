@@ -22,7 +22,7 @@ extension UIView
     func setCirleCornerRadius()
     {
         DispatchQueue.main.async {
-            self.layer.cornerRadius = self.frame.size.width / 2
+            self.layer.cornerRadius = self.frame.size.height / 2
             self.layer.masksToBounds = true
         }
     }

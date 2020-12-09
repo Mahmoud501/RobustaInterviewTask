@@ -49,7 +49,6 @@ class SkeletonProfileView: UIView {
     }
     
     func setupUI() {
-        self.alpha = 0
         self.listOnly = true
         cornerMethod(self)
     }

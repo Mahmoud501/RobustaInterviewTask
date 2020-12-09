@@ -26,18 +26,23 @@
 {
     NSURLSession *session = [NSURLSession sharedSession];
     NSURL *url = [NSURL URLWithString:urlStr];
-
+    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:60];
     // Asynchronously API is hit here
-    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
                                             completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                                 NSLog(@"%@",data);
                                                 if (error)
-                                                    failure(error);
+                                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                                        failure(error);
+                                                    });
+
                                                 else {
                                                     NSMutableArray *json  = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
                                                     NSLog(@"%@",json);
+                                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                                        success(json);
+                                                    });
                                                     //NSDictionary *first = [json objectAtIndex:0];
-                                                    success(json);
                                                 }
                                             }];
     [dataTask resume];    // Executed First
@@ -58,19 +63,27 @@
     
     NSURLSession *session = [NSURLSession sharedSession];
     NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:60];
 
     // Asynchronously API is hit here
-    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url
+    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:request
                                             completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                                 NSLog(@"%@",data);
                                                 if (error)
-                                                    failure(error);
-                                                else {
+
+                                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                                        failure(error);
+                                                    });
+
+                                                    else {
                                                     NSDictionary *json  = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                                     NSLog(@"%@",json);
                                                     //NSDictionary *first = [json objectAtIndex:0];
-                                                    success(json);
-                                                }
+                                                        dispatch_async(dispatch_get_main_queue(), ^{
+                                                            success(json);
+                                                        });
+
+                                                    }
                                             }];
     [dataTask resume];    // Executed First
 

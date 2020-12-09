@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class AppFactory {
     
@@ -14,5 +15,10 @@ class AppFactory {
     
     private init() { }
     
+    var isPad: Bool {
+        get {
+            return UIDevice.current.userInterfaceIdiom == .pad
+        }
+    }
     
 }

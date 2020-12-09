@@ -7,7 +7,7 @@ target 'RobustaTask' do
 
 pod 'SwiftMessages'
 pod 'IQKeyboardManager'
-pod 'EasyTipView'
+#pod 'EasyTipView'
 pod "SkeletonView"
 
   # Pods for RobustaTask
