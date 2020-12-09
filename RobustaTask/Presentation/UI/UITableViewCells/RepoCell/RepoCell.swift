@@ -28,7 +28,7 @@ class RepoCell: UITableViewCell {
     
     var repo: RepoModel? {
         didSet {            
-            self.imgRepo.loadImage(fromURL: repo?.owner?.avatar_url ?? "", placeHolder: "RepoIcon")
+            self.imgRepo.loadImage(fromURL: repo?.owner?.avatar_url ?? "")
             self.lblRepoName.text = repo?.name
              // api don't have name so i switch it with login name
             self.lblOwnerName.text = repo?.owner?.login

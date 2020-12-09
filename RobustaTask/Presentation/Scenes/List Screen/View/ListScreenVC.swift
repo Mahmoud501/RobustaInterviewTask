@@ -18,7 +18,6 @@ class ListScreenVC: UIViewController {
     //ui variables -> Component
     var emptyGetView: EmptyData!
     var refreshControl = UIRefreshControl()
-    var headerView: SearchHeaderView!
     ///////////////////////////////////////////////////////////////////////////
     
     //outlets
@@ -26,12 +25,24 @@ class ListScreenVC: UIViewController {
     @IBOutlet weak var activityGetList: UIActivityIndicatorView!
     @IBOutlet weak var vuContain: UIView!
     @IBOutlet weak var skeletonViw: SkeletonProfileView!
-    
+    @IBOutlet weak var vuSearch: SearchHeaderView!
     
     //actions
     @IBAction func searchClicked(_ sender: Any) {
-        isHeaderShown = !isHeaderShown
-        self.TVRepo.reloadData()
+        if (self.presenter?.list?.count ?? 0) > 0 {
+            isHeaderShown = !isHeaderShown
+            if isHeaderShown {
+                vuSearch.txtSearch.becomeFirstResponder()
+            }else {
+                self.view.endEditing(true)
+            }
+            UIView.animate(withDuration: 0.25) {
+                self.vuSearch.isHidden = !self.isHeaderShown
+            }
+        }else {
+            AlertClass2.ShowErrorStatusBar(vc: nil, message: "No Data Exist")
+        }
+        
     }
     
     @objc func refresh(_ sender: AnyObject) {
@@ -55,6 +66,7 @@ extension ListScreenVC {
         super.viewDidLoad()
         if presenter == nil {
             presenter = ListScreenPresenter.init(GetListView: self)
+            presenter?.SeachView = self
         }
         setupUI()
         initFunc()
@@ -67,7 +79,7 @@ extension ListScreenVC {
 
     func setupUI() {
         TVRepo.register(UINib.init(nibName: "RepoCell", bundle: nil), forCellReuseIdentifier: "RepoCell")
-        
+        vuSearch.isHidden = true
         //setupEmpty View
         emptyGetView = EmptyData.init()
         emptyGetView.setupViewConstraint(vu: self.vuContain)
@@ -89,10 +101,9 @@ extension ListScreenVC {
     //setupHeaderView = Search =>
     //logic when clicked search button the view will appear or disappear
     func setupHeaderView() {
-        headerView = SearchHeaderView.init()
-        headerView.didChangeText = { [weak self] text in
+        vuSearch.didChangeText = { [weak self] text in
             guard let self = self else { return }
-            print(text)
+            self.presenter?.search(text: text)
         }
     }
     

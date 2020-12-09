@@ -28,3 +28,11 @@ extension ListScreenVC: ListScreenView {
     }
     
 }
+
+extension ListScreenVC: ListScreenSeachView {
+    
+    func finishSearch() {
+        self.TVRepo.reloadData()
+        self.TVRepo.contentOffset.y = 0
+    }
+}

@@ -28,7 +28,7 @@ extension UIImageView {
             if let data = cache.cachedResponse(for: request)?.data , let image = UIImage.init(data: data) {
                 //cache image image
                 DispatchQueue.main.async {
-                    self.transition(to: image)
+                    self.image = image
                 }
             }else {
                 URLSession.shared.dataTask(with: request) {(data, urlResponse, error) in

@@ -26,21 +26,35 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZi-RA-ZnV">
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DJb-vi-o65">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6ee-E1-MJk">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <connections>
-                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="pTr-Hp-87h"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="hLx-sB-4Ed"/>
-                                        </connections>
-                                    </tableView>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oPR-bT-ANl" customClass="SearchHeaderView" customModule="RobustaTask" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="MGG-UX-qnD">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                                    </constraint>
+                                                </constraints>
+                                            </view>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DJb-vi-o65">
+                                                <rect key="frame" x="0.0" y="70" width="320" height="454"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pTr-Hp-87h"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hLx-sB-4Ed"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="DJb-vi-o65" secondAttribute="trailing" id="1wa-OD-OpC"/>
-                                    <constraint firstItem="DJb-vi-o65" firstAttribute="top" secondItem="JZi-RA-ZnV" secondAttribute="top" id="6Z4-Ln-I07"/>
-                                    <constraint firstAttribute="bottom" secondItem="DJb-vi-o65" secondAttribute="bottom" id="FIc-Zu-Cbz"/>
-                                    <constraint firstItem="DJb-vi-o65" firstAttribute="leading" secondItem="JZi-RA-ZnV" secondAttribute="leading" id="d3D-DO-Ucj"/>
+                                    <constraint firstAttribute="bottom" secondItem="6ee-E1-MJk" secondAttribute="bottom" id="9uB-0Z-jVg"/>
+                                    <constraint firstAttribute="trailing" secondItem="6ee-E1-MJk" secondAttribute="trailing" id="AYW-9r-jnU"/>
+                                    <constraint firstItem="6ee-E1-MJk" firstAttribute="top" secondItem="JZi-RA-ZnV" secondAttribute="top" id="FVw-EI-Snf"/>
+                                    <constraint firstItem="6ee-E1-MJk" firstAttribute="leading" secondItem="JZi-RA-ZnV" secondAttribute="leading" id="Q5b-bf-uXJ"/>
                                 </constraints>
                             </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sSM-NU-3xP">
@@ -77,6 +91,7 @@
                         <outlet property="activityGetList" destination="sSM-NU-3xP" id="Wp0-ft-Yae"/>
                         <outlet property="skeletonViw" destination="9TG-T3-yY1" id="wci-tq-qqP"/>
                         <outlet property="vuContain" destination="JZi-RA-ZnV" id="j3o-by-t0L"/>
+                        <outlet property="vuSearch" destination="oPR-bT-ANl" id="nmN-wI-wXw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

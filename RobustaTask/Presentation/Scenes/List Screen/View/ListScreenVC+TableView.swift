@@ -41,15 +41,19 @@ extension ListScreenVC: UITableViewDelegate, UITableViewDataSource {
         return UITableView.automaticDimension
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return headerView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if isHeaderShown {
-            return CGFloat(SearchHeaderView.CommonHeigth)
-        }else {
-            return 0
+   func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+
+       let repo = UITableViewRowAction(style: .default, title: "GoTo Repo") { (action, indexPath) in
+            let repo = self.presenter?.list?[indexPath.row]
+            if let link = repo?.html_url {
+                if let url = URL(string: link) {
+                    UIApplication.shared.open(url)
+                }
+            }
         }
+        repo.backgroundColor = UIColor.blue
+        return [repo]
     }
+   
+    
 }

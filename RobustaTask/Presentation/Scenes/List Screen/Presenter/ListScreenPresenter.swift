@@ -10,8 +10,10 @@ import Foundation
 
 class ListScreenPresenter: ListScreenDataSource {
   
-    var list: [RepoModel]?
+    var cacheList: [RepoModel]? // cache list is all repos
+    var list: [RepoModel]? // list is display repos may be all , or may be filter by name
     weak var GetListView: ListScreenView?
+    weak var SeachView: ListScreenSeachView?
     
     init(GetListView: ListScreenView?) {
         self.GetListView = GetListView
@@ -21,11 +23,24 @@ class ListScreenPresenter: ListScreenDataSource {
 
 extension ListScreenPresenter: ListScreenDelegate {
     
+    func search(text: String)  {
+        if text.count >= 2 {            
+            self.list = self.cacheList?.filter{ ($0.name?.contains(text) ?? false) }
+        }else {
+            if text.count == 0 {
+                self.list = self.cacheList
+            }
+        }
+        SeachView?.finishSearch()
+    }
+    
+    
     func getRepoList() {
         NetworkHandler.getJsonArrayResponse(NetworkRouter.ListRepo, success: { (array) in
             self.GetListView?.finishGetList()
             let arr = array as? [[String: Any]]
-            self.list = arr?.map { RepoModel.init(dict: $0) }
+            self.cacheList = arr?.map { RepoModel.init(dict: $0) }
+            self.list = self.cacheList
             self.GetListView?.successGetList()
         }) { (error) in
             self.GetListView?.finishGetList()
