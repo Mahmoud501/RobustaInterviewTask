@@ -1,0 +1,36 @@
+This Project Done in Swift programming except Infrastructure of network in objective c
+Project work for iphone / iPad
+
+- Architecture: MVP
+
+first project folder
+- Model
+  - is the models classes of project and has init for any parse from outside repos
+  
+- Application
+ - is the config files of project such as plist , assets , appdelegate
+ 
+- Infrastructure
+ - contains two folders
+    - helper: contains helper classes & extensions
+    - Repo: contains repo design pattern all repos that can use in app (Network Repo , Cache Data, Core Data)
+
+- Presentation
+    - UI Folder: contains all ui (storyboard, xib, nib , cells)
+    - Scenes: Contains Modules
+      - each module contain
+        - view: UI of screen
+        - protocol: protocol that screen must implement
+        - presenter: the brain of screen
+        - router: the call of screen to navigate
+        
+        
+        
+        
+
+Thanks
+
+BR
+Mahmoud
+
+01551846840
