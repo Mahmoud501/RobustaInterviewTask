@@ -1,0 +1,30 @@
+PODS:
+  - EasyTipView (2.0.4)
+  - IQKeyboardManager (6.5.5)
+  - SkeletonView (1.8.7)
+  - SwiftMessages (7.0.1):
+    - SwiftMessages/App (= 7.0.1)
+  - SwiftMessages/App (7.0.1)
+
+DEPENDENCIES:
+  - EasyTipView
+  - IQKeyboardManager
+  - SkeletonView
+  - SwiftMessages
+
+SPEC REPOS:
+  trunk:
+    - EasyTipView
+    - IQKeyboardManager
+    - SkeletonView
+    - SwiftMessages
+
+SPEC CHECKSUMS:
+  EasyTipView: 4f8beae0a82db2ca4a9b5fd658785fc5f61d296b
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  SkeletonView: ba5370f41280b2f0a76918bb143c1294232bb4f4
+  SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
+
+PODFILE CHECKSUM: a22bf743fa3861b6a98d909891eff63cb93a8e25
+
+COCOAPODS: 1.8.4
