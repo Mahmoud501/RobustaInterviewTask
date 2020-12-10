@@ -23,7 +23,8 @@ class ListScreenPresenter: ListScreenDataSource {
 
 extension ListScreenPresenter: ListScreenDelegate {
     
-    func search(text: String)  {
+    @discardableResult
+    func search(text: String) -> [RepoModel]?  {
         if text.count >= 2 {            
             self.list = self.cacheList?.filter{ ($0.name?.contains(text) ?? false) }
         }else {
@@ -32,6 +33,7 @@ extension ListScreenPresenter: ListScreenDelegate {
             }
         }
         SeachView?.finishSearch()
+        return self.list
     }
     
     

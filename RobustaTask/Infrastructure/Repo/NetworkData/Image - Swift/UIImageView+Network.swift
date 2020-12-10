@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIImageView {
-    public func loadImage(fromURL url: String, placeHolder: String? = nil) {
+    public func loadImage(fromURL url: String, placeHolder: String? = nil,succes: ((UIImage)->())? = nil) {
 
         //1.
         guard let imageURL = URL(string: url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!) else {
@@ -28,6 +28,7 @@ extension UIImageView {
             if let data = cache.cachedResponse(for: request)?.data , let image = UIImage.init(data: data) {
                 //cache image image
                 DispatchQueue.main.async {
+                    succes?(image)
                     self.image = image
                 }
             }else {
@@ -36,6 +37,7 @@ extension UIImageView {
                         let cacheData = CachedURLResponse(response: response, data: data)
                         cache.storeCachedResponse(cacheData, for: request)
                         DispatchQueue.main.async {
+                            succes?(image)
                             self.transition(to: image)
                         }
                     }else {

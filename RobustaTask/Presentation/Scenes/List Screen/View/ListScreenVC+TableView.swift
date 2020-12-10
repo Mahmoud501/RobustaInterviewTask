@@ -26,9 +26,9 @@ extension ListScreenVC: UITableViewDelegate, UITableViewDataSource {
         
         //TEST Date because api dont have date
         if indexPath.row == 0 {
-            cell.lblDate.text = "2019-12-14 10:44:00".getDatePeriodString
+            cell.lblDate.text = "2019-12-14 10:44:00".getDatePeriodString(format: "yyyy-MM-dd HH:mm:ss")
         }else {
-            cell.lblDate.text = "2019-12-14 10:44:00".getDateStringLocalized
+            cell.lblDate.text = "2019-12-14 10:44:00".getDateStringLocalized(format: "yyyy-MM-dd HH:mm:ss")
         }
         return cell
     }

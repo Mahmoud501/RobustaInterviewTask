@@ -31,6 +31,6 @@ protocol ListScreenDataSource {
 protocol ListScreenDelegate {
     
     func getRepoList()
-    func search(text: String)
+    func search(text: String)-> [RepoModel]?
     
 }

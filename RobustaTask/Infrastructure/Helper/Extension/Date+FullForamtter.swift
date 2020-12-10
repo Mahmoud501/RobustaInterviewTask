@@ -73,55 +73,69 @@ extension Date {
 
 extension String {
     
-    var getDatePeriodString: String? {
-        get {
-            let dateFormatter = DateFormatter()
-            dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            if let date = dateFormatter.date(from: self) {
-                let calendar = NSCalendar.current
-                let date1 = calendar.startOfDay(for: Date())
-                let date2 = calendar.startOfDay(for: date)
-                let components = calendar.dateComponents([.year , .month , .day , .hour , .minute], from: date2, to: date1)
-                if (components.year ?? 0) != 0  {
-                    return components.year!.description  + " " + "Year ago".localized
-                }
-                if (components.month ?? 0) != 0 {
-                    return components.month!.description  + " " + "Month ago".localized
-                }
-                if (components.day ?? 0) != 0 {
-                    return components.day!.description  + " " + "Day ago".localized
-                }
-                if (components.hour ?? 0) != 0 {
-                    return components.hour!.description  + " " + "Hour ago".localized
-                }
-                if (components.minute ?? 0) != 0 {
-                    return components.minute!.description  + " " + "Minute ago".localized
-                }
-                
-                return "Just now".localized
+    func getFomatDate(format: String) -> String?  {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        dateFormatter.dateFormat = format // "yyyy-MM-dd HH:mm:ss"
+        if let date = dateFormatter.date(from: self) {
+            let calendar = NSCalendar.current
+            let date1 = calendar.startOfDay(for: Date())
+            let date2 = calendar.startOfDay(for: date)
+            let components = calendar.dateComponents([.year , .month , .day , .hour , .minute], from: date2, to: date1)
+            if (components.month ?? 0) > 6 {
+                return self.getDateStringLocalized(format: format)
+            }else {
+                return self.getDatePeriodString(format: format)
             }
-            return nil
         }
-        
+        return nil
     }
+        
+    
+    func getDatePeriodString(format: String) -> String?  {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        dateFormatter.dateFormat = format // "yyyy-MM-dd HH:mm:ss"
+        if let date = dateFormatter.date(from: self) {
+            let calendar = NSCalendar.current
+            let date1 = calendar.startOfDay(for: Date())
+            let date2 = calendar.startOfDay(for: date)
+            let components = calendar.dateComponents([.year , .month , .day , .hour , .minute], from: date2, to: date1)
+            if (components.year ?? 0) != 0  {
+                return components.year!.description  + " " + "Year ago".localized
+            }
+            if (components.month ?? 0) != 0 {
+                return components.month!.description  + " " + "Month ago".localized
+            }
+            if (components.day ?? 0) != 0 {
+                return components.day!.description  + " " + "Day ago".localized
+            }
+            if (components.hour ?? 0) != 0 {
+                return components.hour!.description  + " " + "Hour ago".localized
+            }
+            if (components.minute ?? 0) != 0 {
+                return components.minute!.description  + " " + "Minute ago".localized
+            }
+            
+            return "Just now".localized
+        }
+        return nil
 
-    var getDateStringLocalized: String? {
-
-        get {
+    }
+        
+    func getDateStringLocalized(format: String) -> String?  {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        dateFormatter.dateFormat = format
+        if let date = dateFormatter.date(from:self) {
             let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            if let date = dateFormatter.date(from:self) {
-                let dateFormatter = DateFormatter()
-                dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-                dateFormatter.calendar = Calendar.current
-                dateFormatter.dateFormat = "EEEE , MMM, d, yyyy"
-                let str = dateFormatter.string(from: date)
-                return str
-            }
-            return nil
+            dateFormatter.calendar = Calendar.current
+            dateFormatter.dateFormat = "EEEE , MMM, d, yyyy"
+            let str = dateFormatter.string(from: date)
+            return str
         }
+        return nil
     }
     
 }
