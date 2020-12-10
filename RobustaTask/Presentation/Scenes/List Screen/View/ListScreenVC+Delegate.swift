@@ -17,6 +17,7 @@ extension ListScreenVC: ListScreenView {
     }
     
     func successGetList() {
+        self.vuSearch.txtSearch.text = ""
         self.TVRepo.alpha = 1
         self.TVRepo.reloadData()
     }

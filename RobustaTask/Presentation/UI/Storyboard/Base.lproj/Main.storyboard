@@ -34,7 +34,7 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="MGG-UX-qnD">
-                                                        <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="90"/>
                                                     </constraint>
                                                 </constraints>
                                             </view>
@@ -98,6 +98,214 @@
             </objects>
             <point key="canvasLocation" x="1136.25" y="129.92957746478874"/>
         </scene>
+        <!--Repository Detail-->
+        <scene sceneID="Jj3-sE-sNv">
+            <objects>
+                <viewController storyboardIdentifier="RepoDetailVC" id="v38-QH-3hc" customClass="RepoDetailVC" customModule="RobustaTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WTa-vY-ZoR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v37-2k-nTJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="luV-eg-JO6">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="570"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RepoHeaderIcon" translatesAutoresizingMaskIntoConstraints="NO" id="HuO-wd-TGt">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Neo-vo-xKR">
+                                                <rect key="frame" x="5" y="209" width="310" height="361"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdr-sw-LBe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="310" height="171"/>
+                                                        <string key="text">Owner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner NameOwner Name</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        </variation>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="HkZ-4C-K2g">
+                                                        <rect key="frame" x="0.0" y="181" width="310" height="28"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Owner Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEf-7e-Sdk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="28"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                </variation>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw9-sM-R9m">
+                                                                <rect key="frame" x="110" y="0.0" width="200" height="28"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <state key="normal" title="Test Test Test">
+                                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                                </variation>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="AKY-bU-Qxv">
+                                                        <rect key="frame" x="0.0" y="219" width="310" height="28"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Repository Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhM-JY-RBr">
+                                                                <rect key="frame" x="0.0" y="0.0" width="134.5" height="28"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                </variation>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="su7-c2-hlK">
+                                                                <rect key="frame" x="141.5" y="0.0" width="168.5" height="28"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <state key="normal" title="Test Test Test">
+                                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                                </variation>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="KcR-vk-zXo">
+                                                        <rect key="frame" x="0.0" y="257" width="310" height="28"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Privacy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUx-TJ-DzU">
+                                                                <rect key="frame" x="0.0" y="0.0" width="54.5" height="28"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                </variation>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRa-5I-TEC">
+                                                                <rect key="frame" x="61.5" y="0.0" width="248.5" height="28"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <state key="normal" title="Test Test Test">
+                                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                                </variation>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="SXP-gu-rKE">
+                                                        <rect key="frame" x="0.0" y="295" width="310" height="28"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Repo URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yr-gE-8gb">
+                                                                <rect key="frame" x="0.0" y="0.0" width="76" height="28"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                </variation>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REM-7Z-Sj8">
+                                                                <rect key="frame" x="83" y="0.0" width="227" height="28"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <state key="normal" title="Test Test Test">
+                                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                                </variation>
+                                                                <connections>
+                                                                    <action selector="repoURLCLicked:" destination="v38-QH-3hc" eventType="touchUpInside" id="5UF-7l-vzC"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="pWK-Sc-WFD">
+                                                        <rect key="frame" x="0.0" y="333" width="310" height="28"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Owner Repo URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RST-Ta-CeI">
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="28"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                </variation>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgT-vV-oIc">
+                                                                <rect key="frame" x="135" y="0.0" width="175" height="28"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <state key="normal" title="Test Test Test">
+                                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                                </variation>
+                                                                <connections>
+                                                                    <action selector="ownerRepoClicked:" destination="v38-QH-3hc" eventType="touchUpInside" id="UtS-oK-0Ke"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="HuO-wd-TGt" firstAttribute="leading" secondItem="luV-eg-JO6" secondAttribute="leading" id="7k8-LK-o9b"/>
+                                            <constraint firstItem="Neo-vo-xKR" firstAttribute="leading" secondItem="luV-eg-JO6" secondAttribute="leading" constant="5" id="HL6-fC-Hhd">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="15"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="Neo-vo-xKR" secondAttribute="trailing" constant="5" id="N7x-cF-2cd">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="15"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="HuO-wd-TGt" secondAttribute="trailing" id="hEl-X3-cjt"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=regular" spacing="20"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="luV-eg-JO6" firstAttribute="leading" secondItem="v37-2k-nTJ" secondAttribute="leading" id="6lS-Cx-zdn"/>
+                                    <constraint firstAttribute="bottom" secondItem="luV-eg-JO6" secondAttribute="bottom" constant="25" id="AQ8-BT-wLK"/>
+                                    <constraint firstAttribute="trailing" secondItem="luV-eg-JO6" secondAttribute="trailing" id="Eak-Iy-QI7"/>
+                                    <constraint firstItem="luV-eg-JO6" firstAttribute="centerX" secondItem="v37-2k-nTJ" secondAttribute="centerX" id="d9X-XT-5l8"/>
+                                    <constraint firstItem="luV-eg-JO6" firstAttribute="top" secondItem="lMQ-dn-cfE" secondAttribute="top" id="vg5-bQ-xy9"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="lMQ-dn-cfE"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Mul-Tp-5Eu"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HuO-wd-TGt" firstAttribute="height" secondItem="WTa-vY-ZoR" secondAttribute="height" multiplier="0.35" id="0Dr-3s-8ng"/>
+                            <constraint firstItem="v37-2k-nTJ" firstAttribute="top" secondItem="mSq-qG-nfu" secondAttribute="top" id="4dp-dc-xe3"/>
+                            <constraint firstAttribute="trailing" secondItem="v37-2k-nTJ" secondAttribute="trailing" id="mHd-8R-JYq"/>
+                            <constraint firstAttribute="bottom" secondItem="v37-2k-nTJ" secondAttribute="bottom" id="s9o-3R-9gT"/>
+                            <constraint firstItem="v37-2k-nTJ" firstAttribute="leading" secondItem="WTa-vY-ZoR" secondAttribute="leading" id="tbd-Wr-jyb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mSq-qG-nfu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Repository Detail" id="h4C-Wx-uag"/>
+                    <connections>
+                        <outlet property="btnOwnerName" destination="fw9-sM-R9m" id="gS2-RF-7V7"/>
+                        <outlet property="btnOwnerRepoURL" destination="CgT-vV-oIc" id="FMb-Je-Qkh"/>
+                        <outlet property="btnPrivacy" destination="iRa-5I-TEC" id="6OH-AV-7E6"/>
+                        <outlet property="btnRepoNam" destination="su7-c2-hlK" id="7J7-OS-CJA"/>
+                        <outlet property="btnRepoURL" destination="REM-7Z-Sj8" id="eFa-eY-bPP"/>
+                        <outlet property="imgOwner" destination="HuO-wd-TGt" id="Va7-xI-j5T"/>
+                        <outlet property="lblDescRepo" destination="Bdr-sw-LBe" id="hJ3-rr-gxU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dt9-Bf-lpB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1940.625" y="129.92957746478874"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="XBG-fH-Iwo">
             <objects>
@@ -119,5 +327,6 @@
     </scenes>
     <resources>
         <image name="Path 12" width="21" height="21"/>
+        <image name="RepoHeaderIcon" width="420" height="232"/>
     </resources>
 </document>

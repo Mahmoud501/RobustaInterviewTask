@@ -35,6 +35,9 @@ extension ListScreenVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.TVRepo.deselectRow(at: indexPath, animated: true)
+        let item = presenter?.list?[indexPath.row]
+        let vc = RepoDetailRouter.createVC(repo: item)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

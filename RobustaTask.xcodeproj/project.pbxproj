@@ -39,6 +39,16 @@
 		06CDE06225810E02000B4D2D /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE06025810E02000B4D2D /* SearchHeaderView.swift */; };
 		06CDE06425810E12000B4D2D /* SearchHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06CDE06325810E12000B4D2D /* SearchHeaderView.xib */; };
 		06CDE06525810E12000B4D2D /* SearchHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06CDE06325810E12000B4D2D /* SearchHeaderView.xib */; };
+		06CDE06A25811CB6000B4D2D /* RepoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE06825811CB6000B4D2D /* RepoDetailVC.swift */; };
+		06CDE06B25811CB6000B4D2D /* RepoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE06825811CB6000B4D2D /* RepoDetailVC.swift */; };
+		06CDE06F25811F5B000B4D2D /* RepoDetailVC+Bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE06E25811F5B000B4D2D /* RepoDetailVC+Bind.swift */; };
+		06CDE07025811F5B000B4D2D /* RepoDetailVC+Bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE06E25811F5B000B4D2D /* RepoDetailVC+Bind.swift */; };
+		06CDE07325811FA4000B4D2D /* RepoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE07225811FA4000B4D2D /* RepoDetailPresenter.swift */; };
+		06CDE07425811FA4000B4D2D /* RepoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE07225811FA4000B4D2D /* RepoDetailPresenter.swift */; };
+		06CDE07725812394000B4D2D /* RepoDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE07625812394000B4D2D /* RepoDetailProtocol.swift */; };
+		06CDE07825812394000B4D2D /* RepoDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE07625812394000B4D2D /* RepoDetailProtocol.swift */; };
+		06CDE07B25812409000B4D2D /* RepoDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE07A25812409000B4D2D /* RepoDetailRouter.swift */; };
+		06CDE07C25812409000B4D2D /* RepoDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CDE07A25812409000B4D2D /* RepoDetailRouter.swift */; };
 		06FCA5E5257F85EF00BEAFE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA5E4257F85EF00BEAFE0 /* AppDelegate.swift */; };
 		06FCA5E7257F85EF00BEAFE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCA5E6257F85EF00BEAFE0 /* SceneDelegate.swift */; };
 		06FCA5EC257F85EF00BEAFE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06FCA5EA257F85EF00BEAFE0 /* Main.storyboard */; };
@@ -130,6 +140,11 @@
 		06CDE05C2580DBE0000B4D2D /* ListScreenVC+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListScreenVC+Delegate.swift"; sourceTree = "<group>"; };
 		06CDE06025810E02000B4D2D /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
 		06CDE06325810E12000B4D2D /* SearchHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHeaderView.xib; sourceTree = "<group>"; };
+		06CDE06825811CB6000B4D2D /* RepoDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailVC.swift; sourceTree = "<group>"; };
+		06CDE06E25811F5B000B4D2D /* RepoDetailVC+Bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoDetailVC+Bind.swift"; sourceTree = "<group>"; };
+		06CDE07225811FA4000B4D2D /* RepoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailPresenter.swift; sourceTree = "<group>"; };
+		06CDE07625812394000B4D2D /* RepoDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailProtocol.swift; sourceTree = "<group>"; };
+		06CDE07A25812409000B4D2D /* RepoDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailRouter.swift; sourceTree = "<group>"; };
 		06FCA5E1257F85EF00BEAFE0 /* RobustaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobustaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06FCA5E4257F85EF00BEAFE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06FCA5E6257F85EF00BEAFE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +299,50 @@
 			path = SearchHeaderView;
 			sourceTree = "<group>";
 		};
+		06CDE06625811C9A000B4D2D /* RepoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				06CDE06725811CA6000B4D2D /* View */,
+				06CDE07525812373000B4D2D /* Protocol */,
+				06CDE07125811F96000B4D2D /* Presenter */,
+				06CDE079258123EC000B4D2D /* Router */,
+			);
+			path = RepoDetail;
+			sourceTree = "<group>";
+		};
+		06CDE06725811CA6000B4D2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				06CDE06825811CB6000B4D2D /* RepoDetailVC.swift */,
+				06CDE06E25811F5B000B4D2D /* RepoDetailVC+Bind.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		06CDE07125811F96000B4D2D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				06CDE07225811FA4000B4D2D /* RepoDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		06CDE07525812373000B4D2D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				06CDE07625812394000B4D2D /* RepoDetailProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		06CDE079258123EC000B4D2D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				06CDE07A25812409000B4D2D /* RepoDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		06FCA5D8257F85EF00BEAFE0 = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +427,7 @@
 		06FCA60D257F8C9D00BEAFE0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				06CDE06625811C9A000B4D2D /* RepoDetail */,
 				06CDE0372580CB30000B4D2D /* List Screen */,
 				06CDE02D257FBBA7000B4D2D /* TestVC.swift */,
 			);
@@ -737,11 +797,15 @@
 				06FCA5E5257F85EF00BEAFE0 /* AppDelegate.swift in Sources */,
 				06CDE034257FC940000B4D2D /* UIImageView+Network.swift in Sources */,
 				06CDE02E257FBBA7000B4D2D /* TestVC.swift in Sources */,
+				06CDE06F25811F5B000B4D2D /* RepoDetailVC+Bind.swift in Sources */,
 				06FCA660257F91BC00BEAFE0 /* EmptyData.swift in Sources */,
+				06CDE07325811FA4000B4D2D /* RepoDetailPresenter.swift in Sources */,
 				06FCA645257F913A00BEAFE0 /* Img+GIF.swift in Sources */,
 				06FCA63B257F913A00BEAFE0 /* UIWindow+Landescape.swift in Sources */,
 				06CDE0462580CF33000B4D2D /* RepoModel.swift in Sources */,
+				06CDE06A25811CB6000B4D2D /* RepoDetailVC.swift in Sources */,
 				06FCA63F257F913A00BEAFE0 /* UILabel+MoreRead.swift in Sources */,
+				06CDE07B25812409000B4D2D /* RepoDetailRouter.swift in Sources */,
 				06CDE05A2580DB34000B4D2D /* NetworkRouter.swift in Sources */,
 				06FCA631257F913A00BEAFE0 /* String+Validation.swift in Sources */,
 				06CDE0402580CB81000B4D2D /* ListScreenRouter.swift in Sources */,
@@ -750,6 +814,7 @@
 				06CDE04F2580D2A6000B4D2D /* RepoCell.swift in Sources */,
 				06CDE06125810E02000B4D2D /* SearchHeaderView.swift in Sources */,
 				06FCA639257F913A00BEAFE0 /* NSObject+Name.swift in Sources */,
+				06CDE07725812394000B4D2D /* RepoDetailProtocol.swift in Sources */,
 				06FCA673257F95D700BEAFE0 /* AlertController2.swift in Sources */,
 				06FCA667257F95BF00BEAFE0 /* ZDSkeletonCell.swift in Sources */,
 				06FCA5E7257F85EF00BEAFE0 /* SceneDelegate.swift in Sources */,
@@ -776,6 +841,7 @@
 				06FCA642257F913A00BEAFE0 /* UIView+RippleEffect.swift in Sources */,
 				06FCA632257F913A00BEAFE0 /* String+Validation.swift in Sources */,
 				06CDE02C257FBA4E000B4D2D /* NetworkHandler.m in Sources */,
+				06CDE07825812394000B4D2D /* RepoDetailProtocol.swift in Sources */,
 				06FCA64A257F913A00BEAFE0 /* String+Codable.swift in Sources */,
 				06FCA661257F91BC00BEAFE0 /* EmptyData.swift in Sources */,
 				06CDE0472580CF33000B4D2D /* RepoModel.swift in Sources */,
@@ -786,6 +852,8 @@
 				06FCA648257F913A00BEAFE0 /* String+Localization.swift in Sources */,
 				06FCA638257F913A00BEAFE0 /* UIColor+Hex.swift in Sources */,
 				06FCA655257F919700BEAFE0 /* CoreDataRepository.swift in Sources */,
+				06CDE06B25811CB6000B4D2D /* RepoDetailVC.swift in Sources */,
+				06CDE07425811FA4000B4D2D /* RepoDetailPresenter.swift in Sources */,
 				06FCA644257F913A00BEAFE0 /* UITableView+Cell.swift in Sources */,
 				06FCA63E257F913A00BEAFE0 /* NSConstraint+Multiplier.swift in Sources */,
 				06CDE03E2580CB69000B4D2D /* ListScreenVC.swift in Sources */,
@@ -803,8 +871,10 @@
 				06CDE0442580CC7F000B4D2D /* ListScreenProtocol.swift in Sources */,
 				06CDE05B2580DB34000B4D2D /* NetworkRouter.swift in Sources */,
 				06FCA66F257F95C900BEAFE0 /* SkeletonProfileView.swift in Sources */,
+				06CDE07025811F5B000B4D2D /* RepoDetailVC+Bind.swift in Sources */,
 				06CDE05E2580DBE0000B4D2D /* ListScreenVC+Delegate.swift in Sources */,
 				06FCA640257F913A00BEAFE0 /* UILabel+MoreRead.swift in Sources */,
+				06CDE07C25812409000B4D2D /* RepoDetailRouter.swift in Sources */,
 				06CDE06225810E02000B4D2D /* SearchHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
